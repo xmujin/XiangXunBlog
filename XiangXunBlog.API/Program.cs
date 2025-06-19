@@ -1,4 +1,4 @@
-
+using XiangXunBlog.Infrastructure.Extensions;
 namespace XiangXunBlog.API
 {
     public class Program
@@ -10,6 +10,10 @@ namespace XiangXunBlog.API
             // Add services to the container.
 
             builder.Services.AddControllers();
+
+
+            builder.Services.AddInfrastructure(builder.Configuration);
+
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
