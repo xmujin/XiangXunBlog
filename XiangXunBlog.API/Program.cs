@@ -1,3 +1,4 @@
+using XiangXunBlog.Application.Extensions;
 using XiangXunBlog.Infrastructure.Extensions;
 namespace XiangXunBlog.API
 {
@@ -11,7 +12,7 @@ namespace XiangXunBlog.API
 
             builder.Services.AddControllers();
 
-
+            builder.Services.AddApplication();
             builder.Services.AddInfrastructure(builder.Configuration);
 
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

@@ -1,6 +1,10 @@
-@XiangXunBlog.API_HostAddress = http://localhost:5002
+@XiangXunBlog.API_HostAddress = https://localhost:7093
 
 GET {{XiangXunBlog.API_HostAddress}}/weatherforecast/
 Accept: application/json
+
+###
+
+GET {{XiangXunBlog.API_HostAddress}}/api/admin
 
 ###

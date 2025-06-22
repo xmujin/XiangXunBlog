@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\XiangXunBlog.Application\XiangXunBlog.Application.csproj" />
     <ProjectReference Include="..\XiangXunBlog.Infrastructure\XiangXunBlog.Infrastructure.csproj" />
   </ItemGroup>
 
