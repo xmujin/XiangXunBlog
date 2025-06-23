@@ -1,9 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using XiangXunBlog.Application.Security;
 using XiangXunBlog.Domain.Repositories;
 using XiangXunBlog.Infrastructure.Persistence;
 using XiangXunBlog.Infrastructure.Repositories;
+using XiangXunBlog.Infrastructure.Security;
 
 namespace XiangXunBlog.Infrastructure.Extensions;
 /// <summary>
@@ -19,6 +21,7 @@ public static class ServiceCollectionExtensions
             ServerVersion.AutoDetect(connectionString)));
 
         services.AddScoped<IAdminRepository, AdminRepository>();
+        services.AddScoped<IPasswordHasher, BCryptPasswordHasher>();
 
     }
 }

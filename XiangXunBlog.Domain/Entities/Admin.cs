@@ -11,7 +11,7 @@ namespace XiangXunBlog.Domain.Entities
         public string UserName { get; set; } = default!;
 
         [Required]
-        public string Password { get; set; } = default!;
+        public string PasswordHash { get; set; } = default!;
 
 
     }
