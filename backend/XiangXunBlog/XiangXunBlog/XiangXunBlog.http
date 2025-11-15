@@ -1,6 +1,29 @@
-@XiangXunBlog_HostAddress = http://localhost:5029
+@XiangXunBlog_HostAddress = https://localhost:7064
+@bearerToken = eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoieGlhbmd4dW4iLCJuYmYiOjE3NjMyMTYyODksImV4cCI6MTc2MzIxODA4OSwiaWF0IjoxNzYzMjE2Mjg5LCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjUxNTQiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjUxNTQifQ.ACU5_Qrev3MAR80-naNLmZqkBGaiewKqAh1ETtHTyJIIDE0k13CHUA8RoOOAF3XNv3WCXx9JDFRqhmU2yib0pw
 
-GET {{XiangXunBlog_HostAddress}}/weatherforecast/
-Accept: application/json
+GET {{XiangXunBlog_HostAddress}}/api/user
+Authorization: Bearer {{bearerToken}}
+
+###
+
+POST {{XiangXunBlog_HostAddress}}/api/user/login
+Authorization: Bearer {{bearerToken}}
+Content-Type: application/json
+
+{
+  "username": "xiangxun",
+  "password": "123456"
+}
+
+###
+
+POST {{XiangXunBlog_HostAddress}}/api/user/register
+Authorization: Bearer {{bearerToken}}
+Content-Type: application/json
+
+{
+  "username": "xiangxun",
+  "password": "123456"
+}
 
 ###
