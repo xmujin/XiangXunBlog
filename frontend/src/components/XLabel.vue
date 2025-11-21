@@ -1,14 +1,11 @@
 <script setup lang="ts">
+
 </script>
 
 <template>
-  <RouterView />
+<label><slot></slot></label>
 </template>
 
 <style scoped>
-
-
-
-
 
 </style>

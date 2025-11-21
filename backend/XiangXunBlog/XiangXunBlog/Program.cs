@@ -77,6 +77,18 @@ namespace XiangXunBlog
                 };
             });
 
+            // Add CORS
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowFrontend", policy =>
+                {
+                    policy.WithOrigins("http://localhost:5173")
+                          .AllowAnyHeader()
+                          .AllowAnyMethod()
+                          .AllowCredentials();
+                });
+            });
+
 
             builder.Services.AddAuthorization();
 
@@ -90,6 +102,7 @@ namespace XiangXunBlog
             }
 
             app.UseHttpsRedirection();
+            app.UseCors("AllowFrontend");
 
             app.UseAuthentication();
             app.UseAuthorization();

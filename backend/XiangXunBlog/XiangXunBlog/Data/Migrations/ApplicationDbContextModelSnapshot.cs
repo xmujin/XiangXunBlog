@@ -41,6 +41,15 @@ namespace XiangXunBlog.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("x_categories", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "1",
+                            Created = new DateTime(2025, 11, 16, 6, 22, 17, 662, DateTimeKind.Utc).AddTicks(2498),
+                            Description = "与编程相关的文章",
+                            Name = "编程"
+                        });
                 });
 
             modelBuilder.Entity("XiangXunBlog.Models.Post", b =>
@@ -77,6 +86,18 @@ namespace XiangXunBlog.Data.Migrations
                     b.HasIndex("CategoryId");
 
                     b.ToTable("x_posts", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "1",
+                            AuthorId = "1",
+                            CategoryId = "1",
+                            Content = "这是您的第一篇文章。编辑或删除它，然后开始写作吧！",
+                            Created = new DateTime(2025, 11, 16, 6, 22, 17, 662, DateTimeKind.Utc).AddTicks(2516),
+                            LastUpdated = new DateTime(2025, 11, 16, 6, 22, 17, 662, DateTimeKind.Utc).AddTicks(2516),
+                            Title = "欢迎来到XiangXunBlog"
+                        });
                 });
 
             modelBuilder.Entity("XiangXunBlog.Models.User", b =>
@@ -95,6 +116,14 @@ namespace XiangXunBlog.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("x_users", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "1",
+                            PasswordHash = "123",
+                            UserName = "xiangxun"
+                        });
                 });
 
             modelBuilder.Entity("XiangXunBlog.Models.Post", b =>

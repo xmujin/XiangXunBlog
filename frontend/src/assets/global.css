@@ -1,0 +1,36 @@
+* {
+  margin: 0;          /* 去掉默认外边距 */
+  padding: 0;         /* 去掉默认内边距 */
+  text-decoration: none;
+  list-style: none;
+}
+
+a,a:visited{
+  color:inherit;
+}
+
+
+body {
+  background: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  font-family: "SimSun"
+}
+
+:root {
+  /* 主色 导航、主要按钮颜色 */
+  --color-primary: #57aef1;        /* 主按钮 / 主链接 */
+
+  /* 辅助色 起强调作用，使用邻近色、对比色或者补色  */
+  --color-secondary: #a1d3ff;      /* 成功按钮、强调 */
+  --color-success: #97e38f;
+  --color-warning: #ffb44f;
+  --color-error: #e35454;
+  --color-info: #909399;
+
+  /* 中性区 （文字色，背景色，分割线等） */
+  --color-bg-primary: #fff;
+  --color-bg-secondary: #e2e2e2;
+  --color-text-primary: #1d1d1d;
+  --color-text-placeholder: #929292;
+
+}

@@ -27,3 +27,13 @@ Content-Type: application/json
 }
 
 ###
+
+POST {{XiangXunBlog_HostAddress}}/api/post/create
+Authorization: Bearer {{$bearerToken}}
+Content-Type: application/json
+
+{
+  
+}
+
+###

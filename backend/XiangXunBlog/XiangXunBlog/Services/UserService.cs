@@ -40,12 +40,14 @@ namespace XiangXunBlog.Services
             {
                 return false;
             }
+
             User user = new User
             {
                 Id = Ulid.NewUlid().ToString(),
                 UserName = userDto.Username,
                 PasswordHash = BCryptNet.HashPassword(userDto.Password)
             };
+
             await _userRepository.CreateUserAsync(user);
             return true;
         }

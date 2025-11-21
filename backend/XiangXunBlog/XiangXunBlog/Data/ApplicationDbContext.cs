@@ -65,9 +65,42 @@ namespace XiangXunBlog.Data
                 .HasForeignKey(e => e.CategoryId)
                 .IsRequired();
 
+            // init seed data
+            modelBuilder.Entity<User>().HasData(
+                new User
+                {
+                    Id = "1",
+                    UserName = "xiangxun",
+                    PasswordHash = "123"
+                });
+
+            modelBuilder.Entity<Category>().HasData(
+                new Category
+                {
+                    Id = "1",
+                    Name = "编程",
+                    Description = "与编程相关的文章",
+                    Created = DateTime.UtcNow
+                });
+
+            modelBuilder.Entity<Post>().HasData(
+                new Post
+                {
+                    Id = "1",
+                    Title = "欢迎来到XiangXunBlog",
+                    Content = "这是您的第一篇文章。编辑或删除它，然后开始写作吧！",
+                    AuthorId = "1",
+                    CategoryId = "1",
+                    Created = DateTime.UtcNow,
+                    LastUpdated = DateTime.UtcNow
+                }
+
+
+                );
+
 
         }
-        #endregion
 
+        #endregion
     }
 }
